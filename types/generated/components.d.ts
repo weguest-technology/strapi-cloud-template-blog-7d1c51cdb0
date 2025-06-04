@@ -25,7 +25,7 @@ export interface SharedContentId extends Struct.ComponentSchema {
   };
   attributes: {
     ApiType: Schema.Attribute.Enumeration<['title-descrition-cards']>;
-    ContentId: Schema.Attribute.String;
+    ContentDocumentId: Schema.Attribute.String;
   };
 }
 

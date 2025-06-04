@@ -7,7 +7,7 @@
   },
   "options": {},
   "attributes": {
-    "ContentId": {
+    "ContentDocumentId": {
       "type": "string"
     },
     "ApiType": {
