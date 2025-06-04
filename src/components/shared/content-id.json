@@ -9,6 +9,12 @@
   "attributes": {
     "ContentId": {
       "type": "string"
+    },
+    "ApiType": {
+      "type": "enumeration",
+      "enum": [
+        "title-descrition-cards"
+      ]
     }
   }
 }
