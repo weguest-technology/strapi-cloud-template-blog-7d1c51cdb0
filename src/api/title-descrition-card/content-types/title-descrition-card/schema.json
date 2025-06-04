@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "title_descrition_cards",
+  "info": {
+    "singularName": "title-descrition-card",
+    "pluralName": "title-descrition-cards",
+    "displayName": "TitleDescritionCards"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "TItle": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "blocks"
+    },
+    "Cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.card"
+    }
+  }
+}
