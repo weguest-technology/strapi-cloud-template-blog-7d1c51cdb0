@@ -8,7 +8,6 @@ export interface SharedCard extends Struct.ComponentSchema {
     icon: 'file';
   };
   attributes: {
-    article: Schema.Attribute.Relation<'oneToOne', 'api::article.article'>;
     Body: Schema.Attribute.Blocks;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     LinkText: Schema.Attribute.String;

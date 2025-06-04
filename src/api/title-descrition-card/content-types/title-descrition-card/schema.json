@@ -1,16 +1,23 @@
 {
-  "kind": "singleType",
+  "kind": "collectionType",
   "collectionName": "title_descrition_cards",
   "info": {
     "singularName": "title-descrition-card",
     "pluralName": "title-descrition-cards",
-    "displayName": "TitleDescritionCards"
+    "displayName": "TitleDescritionCards",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "TItle": {
+    "TypeId": {
+      "type": "enumeration",
+      "enum": [
+        "mansory"
+      ]
+    },
+    "Title": {
       "type": "string"
     },
     "Description": {

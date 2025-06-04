@@ -535,9 +535,10 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
 }
 
 export interface ApiTitleDescritionCardTitleDescritionCard
-  extends Struct.SingleTypeSchema {
+  extends Struct.CollectionTypeSchema {
   collectionName: 'title_descrition_cards';
   info: {
+    description: '';
     displayName: 'TitleDescritionCards';
     pluralName: 'title-descrition-cards';
     singularName: 'title-descrition-card';
@@ -558,7 +559,8 @@ export interface ApiTitleDescritionCardTitleDescritionCard
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    TItle: Schema.Attribute.String;
+    Title: Schema.Attribute.String;
+    TypeId: Schema.Attribute.Enumeration<['mansory']>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

@@ -19,11 +19,6 @@
     "LinkText": {
       "type": "string"
     },
-    "article": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::article.article"
-    },
     "image": {
       "type": "media",
       "multiple": false,
