@@ -9,10 +9,22 @@ export interface SharedCard extends Struct.ComponentSchema {
   };
   attributes: {
     Body: Schema.Attribute.Blocks;
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    image: Schema.Attribute.Media<'images' | 'files'>;
     LinkText: Schema.Attribute.String;
     LinkUrl: Schema.Attribute.String;
     Title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedContentId extends Struct.ComponentSchema {
+  collectionName: 'components_shared_content_ids';
+  info: {
+    description: '';
+    displayName: 'ContentId';
+    icon: 'refresh';
+  };
+  attributes: {
+    ContentId: Schema.Attribute.String;
   };
 }
 
@@ -82,6 +94,7 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'shared.card': SharedCard;
+      'shared.content-id': SharedContentId;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;

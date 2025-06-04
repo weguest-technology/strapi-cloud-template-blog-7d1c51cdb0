@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_shared_content_ids",
+  "info": {
+    "displayName": "ContentId",
+    "icon": "refresh",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "ContentId": {
+      "type": "string"
+    }
+  }
+}
