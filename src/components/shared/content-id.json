@@ -13,7 +13,7 @@
     "ApiType": {
       "type": "enumeration",
       "enum": [
-        "title-descrition-cards"
+        "title-description-cards-containers"
       ]
     }
   }

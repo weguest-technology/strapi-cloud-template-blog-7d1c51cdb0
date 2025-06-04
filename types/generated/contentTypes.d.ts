@@ -570,14 +570,13 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiTitleDescritionCardTitleDescritionCard
+export interface ApiTitleDescriptionCardsContainerTitleDescriptionCardsContainer
   extends Struct.CollectionTypeSchema {
-  collectionName: 'title_descrition_cards';
+  collectionName: 'title_description_cards_containers';
   info: {
-    description: '';
-    displayName: 'TitleDescritionCards';
-    pluralName: 'title-descrition-cards';
-    singularName: 'title-descrition-card';
+    displayName: 'TitleDescriptionCardsContainer';
+    pluralName: 'title-description-cards-containers';
+    singularName: 'title-description-cards-container';
   };
   options: {
     draftAndPublish: true;
@@ -588,7 +587,7 @@ export interface ApiTitleDescritionCardTitleDescritionCard
     };
   };
   attributes: {
-    Cards: Schema.Attribute.Component<'shared.card', true> &
+    cards: Schema.Attribute.Component<'shared.card', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -597,7 +596,7 @@ export interface ApiTitleDescritionCardTitleDescritionCard
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Description: Schema.Attribute.Blocks &
+    description: Schema.Attribute.Blocks &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -606,19 +605,13 @@ export interface ApiTitleDescritionCardTitleDescritionCard
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::title-descrition-card.title-descrition-card'
+      'api::title-description-cards-container.title-description-cards-container'
     >;
     publishedAt: Schema.Attribute.DateTime;
-    Title: Schema.Attribute.String &
+    title: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
-        };
-      }>;
-    TypeId: Schema.Attribute.Enumeration<['mansory']> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: false;
         };
       }>;
     updatedAt: Schema.Attribute.DateTime;
@@ -1142,7 +1135,7 @@ declare module '@strapi/strapi' {
       'api::category.category': ApiCategoryCategory;
       'api::global.global': ApiGlobalGlobal;
       'api::page.page': ApiPagePage;
-      'api::title-descrition-card.title-descrition-card': ApiTitleDescritionCardTitleDescritionCard;
+      'api::title-description-cards-container.title-description-cards-container': ApiTitleDescriptionCardsContainerTitleDescriptionCardsContainer;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

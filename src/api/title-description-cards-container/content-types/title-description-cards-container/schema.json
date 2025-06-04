@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "title_descrition_cards",
+  "collectionName": "title_description_cards_containers",
   "info": {
-    "singularName": "title-descrition-card",
-    "pluralName": "title-descrition-cards",
-    "displayName": "TitleDescritionCards",
-    "description": ""
+    "singularName": "title-description-cards-container",
+    "pluralName": "title-description-cards-containers",
+    "displayName": "TitleDescriptionCardsContainer"
   },
   "options": {
     "draftAndPublish": true
@@ -16,18 +15,7 @@
     }
   },
   "attributes": {
-    "TypeId": {
-      "type": "enumeration",
-      "enum": [
-        "mansory"
-      ],
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      }
-    },
-    "Title": {
+    "title": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -35,7 +23,7 @@
         }
       }
     },
-    "Description": {
+    "description": {
       "type": "blocks",
       "pluginOptions": {
         "i18n": {
@@ -43,7 +31,7 @@
         }
       }
     },
-    "Cards": {
+    "cards": {
       "type": "component",
       "repeatable": true,
       "component": "shared.card",

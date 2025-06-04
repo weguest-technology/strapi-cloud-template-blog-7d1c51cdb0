@@ -24,7 +24,9 @@ export interface SharedContentId extends Struct.ComponentSchema {
     icon: 'refresh';
   };
   attributes: {
-    ApiType: Schema.Attribute.Enumeration<['title-descrition-cards']>;
+    ApiType: Schema.Attribute.Enumeration<
+      ['title-description-cards-containers']
+    >;
     ContentDocumentId: Schema.Attribute.String;
   };
 }
