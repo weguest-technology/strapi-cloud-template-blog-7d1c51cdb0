@@ -1,8 +1,8 @@
 {
-  "collectionName": "components_shared_content_ids",
+  "collectionName": "components_weguest_content_ids",
   "info": {
     "displayName": "ContentId",
-    "icon": "refresh",
+    "icon": "bold",
     "description": ""
   },
   "options": {},

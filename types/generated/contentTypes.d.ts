@@ -574,6 +574,7 @@ export interface ApiTitleDescriptionCardsContainerTitleDescriptionCardsContainer
   extends Struct.CollectionTypeSchema {
   collectionName: 'title_description_cards_containers';
   info: {
+    description: '';
     displayName: 'TitleDescriptionCardsContainer';
     pluralName: 'title-description-cards-containers';
     singularName: 'title-description-cards-container';
@@ -587,7 +588,7 @@ export interface ApiTitleDescriptionCardsContainerTitleDescriptionCardsContainer
     };
   };
   attributes: {
-    cards: Schema.Attribute.Component<'shared.card', true> &
+    cards: Schema.Attribute.Component<'weguest.card', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -596,7 +597,13 @@ export interface ApiTitleDescriptionCardsContainerTitleDescriptionCardsContainer
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.Blocks &
+    description: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

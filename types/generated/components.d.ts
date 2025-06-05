@@ -1,21 +1,5 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
-export interface SharedCard extends Struct.ComponentSchema {
-  collectionName: 'components_shared_cards';
-  info: {
-    description: '';
-    displayName: 'Card';
-    icon: 'file';
-  };
-  attributes: {
-    Body: Schema.Attribute.Blocks;
-    image: Schema.Attribute.Media<'images' | 'files'>;
-    LinkText: Schema.Attribute.String;
-    LinkUrl: Schema.Attribute.String;
-    Title: Schema.Attribute.String;
-  };
-}
-
 export interface SharedContentId extends Struct.ComponentSchema {
   collectionName: 'components_shared_content_ids';
   info: {
@@ -24,10 +8,10 @@ export interface SharedContentId extends Struct.ComponentSchema {
     icon: 'refresh';
   };
   attributes: {
-    ApiType: Schema.Attribute.Enumeration<
+    apiType: Schema.Attribute.Enumeration<
       ['title-description-cards-containers']
     >;
-    ContentDocumentId: Schema.Attribute.String;
+    contentDocumentId: Schema.Attribute.String;
   };
 }
 
@@ -93,16 +77,57 @@ export interface SharedSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface WeguestCard extends Struct.ComponentSchema {
+  collectionName: 'components_weguest_cards';
+  info: {
+    description: '';
+    displayName: 'Card';
+    icon: 'file';
+  };
+  attributes: {
+    body: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    linkText: Schema.Attribute.String;
+    linkUrl: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface WeguestContentId extends Struct.ComponentSchema {
+  collectionName: 'components_weguest_content_ids';
+  info: {
+    description: '';
+    displayName: 'ContentId';
+    icon: 'bold';
+  };
+  attributes: {
+    apiType: Schema.Attribute.Enumeration<
+      ['title-description-cards-containers']
+    >;
+    contentDocumentId: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
-      'shared.card': SharedCard;
       'shared.content-id': SharedContentId;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'weguest.card': WeguestCard;
+      'weguest.content-id': WeguestContentId;
     }
   }
 }

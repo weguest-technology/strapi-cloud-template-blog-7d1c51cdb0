@@ -4,7 +4,8 @@
   "info": {
     "singularName": "title-description-cards-container",
     "pluralName": "title-description-cards-containers",
-    "displayName": "TitleDescriptionCardsContainer"
+    "displayName": "TitleDescriptionCardsContainer",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -24,7 +25,11 @@
       }
     },
     "description": {
-      "type": "blocks",
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -34,7 +39,7 @@
     "cards": {
       "type": "component",
       "repeatable": true,
-      "component": "shared.card",
+      "component": "weguest.card",
       "pluginOptions": {
         "i18n": {
           "localized": true
