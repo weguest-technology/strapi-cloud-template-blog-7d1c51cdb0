@@ -15,6 +15,9 @@
       "enum": [
         "title-description-cards-containers"
       ]
+    },
+    "populateAttributes": {
+      "type": "string"
     }
   }
 }

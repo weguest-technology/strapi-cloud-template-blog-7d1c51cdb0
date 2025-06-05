@@ -16,11 +16,6 @@
     }
   },
   "attributes": {
-    "ids": {
-      "type": "component",
-      "repeatable": true,
-      "component": "shared.content-id"
-    },
     "seo": {
       "type": "component",
       "repeatable": false,
@@ -30,6 +25,11 @@
           "localized": true
         }
       }
+    },
+    "ids": {
+      "type": "component",
+      "repeatable": true,
+      "component": "weguest.content-id"
     }
   }
 }

@@ -1,20 +1,5 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
-export interface SharedContentId extends Struct.ComponentSchema {
-  collectionName: 'components_shared_content_ids';
-  info: {
-    description: '';
-    displayName: 'ContentId';
-    icon: 'refresh';
-  };
-  attributes: {
-    apiType: Schema.Attribute.Enumeration<
-      ['title-description-cards-containers']
-    >;
-    contentDocumentId: Schema.Attribute.String;
-  };
-}
-
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -114,13 +99,13 @@ export interface WeguestContentId extends Struct.ComponentSchema {
       ['title-description-cards-containers']
     >;
     contentDocumentId: Schema.Attribute.String;
+    populateAttributes: Schema.Attribute.String;
   };
 }
 
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
-      'shared.content-id': SharedContentId;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
