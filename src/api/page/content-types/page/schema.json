@@ -16,12 +16,12 @@
     }
   },
   "attributes": {
-    "Ids": {
+    "ids": {
       "type": "component",
       "repeatable": true,
       "component": "shared.content-id"
     },
-    "Seo": {
+    "seo": {
       "type": "component",
       "repeatable": false,
       "component": "shared.seo",
