@@ -97,6 +97,7 @@ export interface WeguestContentId extends Struct.ComponentSchema {
     >;
     contentDocumentId: Schema.Attribute.String;
     populateAttributes: Schema.Attribute.String;
+    representation: Schema.Attribute.String;
   };
 }
 

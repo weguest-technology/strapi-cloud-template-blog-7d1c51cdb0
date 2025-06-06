@@ -18,6 +18,9 @@
     },
     "populateAttributes": {
       "type": "string"
+    },
+    "representation": {
+      "type": "string"
     }
   }
 }
