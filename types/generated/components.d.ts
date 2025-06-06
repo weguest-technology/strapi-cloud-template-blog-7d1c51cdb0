@@ -77,10 +77,7 @@ export interface WeguestCard extends Struct.ComponentSchema {
           preset: 'defaultHtml';
         }
       >;
-    image: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     linkText: Schema.Attribute.String;
     linkUrl: Schema.Attribute.String;
     title: Schema.Attribute.String;
