@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * hero-banner service
+ * banner service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::hero-banner.hero-banner');
+module.exports = createCoreService('api::banner.banner');

@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * hero-banner router
+ * banner router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::hero-banner.hero-banner');
+module.exports = createCoreRouter('api::banner.banner');

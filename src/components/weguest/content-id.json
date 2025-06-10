@@ -14,7 +14,7 @@
       "type": "enumeration",
       "enum": [
         "title-description-cards-containers",
-        "banner"
+        "banners"
       ]
     },
     "populateAttributes": {

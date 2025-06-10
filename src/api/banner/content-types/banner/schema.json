@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "hero_banners",
+  "collectionName": "banners",
   "info": {
-    "singularName": "hero-banner",
-    "pluralName": "hero-banners",
-    "displayName": "banner",
-    "description": ""
+    "singularName": "banner",
+    "pluralName": "banners",
+    "displayName": "banner"
   },
   "options": {
     "draftAndPublish": true
@@ -26,39 +25,37 @@
     },
     "headline": {
       "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "options": {
-        "preset": "defaultHtml"
-      },
       "customField": "plugin::ckeditor5.CKEditor"
     },
-    "width": {
-      "type": "integer",
-      "required": true
-    },
-    "height": {
-      "type": "integer",
-      "required": true
-    },
     "background": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
       ],
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
+    },
+    "width": {
+      "type": "integer"
+    },
+    "height": {
+      "type": "integer"
     }
   }
 }
