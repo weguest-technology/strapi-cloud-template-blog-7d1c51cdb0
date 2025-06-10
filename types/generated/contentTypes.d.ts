@@ -538,7 +538,7 @@ export interface ApiHeroBannerHeroBanner extends Struct.CollectionTypeSchema {
   collectionName: 'hero_banners';
   info: {
     description: '';
-    displayName: 'heroBanner';
+    displayName: 'banner';
     pluralName: 'hero-banners';
     singularName: 'hero-banner';
   };

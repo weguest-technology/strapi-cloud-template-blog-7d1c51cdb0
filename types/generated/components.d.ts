@@ -93,7 +93,7 @@ export interface WeguestContentId extends Struct.ComponentSchema {
   };
   attributes: {
     apiType: Schema.Attribute.Enumeration<
-      ['title-description-cards-containers']
+      ['title-description-cards-containers', 'banner']
     >;
     contentDocumentId: Schema.Attribute.String;
     populateAttributes: Schema.Attribute.String;

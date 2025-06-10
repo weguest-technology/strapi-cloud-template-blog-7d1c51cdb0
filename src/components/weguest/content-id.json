@@ -13,7 +13,8 @@
     "apiType": {
       "type": "enumeration",
       "enum": [
-        "title-description-cards-containers"
+        "title-description-cards-containers",
+        "banner"
       ]
     },
     "populateAttributes": {
