@@ -667,6 +667,13 @@ export interface ApiTitleDescriptionCardsContainerTitleDescriptionCardsContainer
           localized: true;
         };
       }>;
+    linkText: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    linkUrl: Schema.Attribute.String;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
