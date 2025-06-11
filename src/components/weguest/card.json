@@ -33,6 +33,11 @@
         "videos",
         "audios"
       ]
+    },
+    "checks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "weguest.check"
     }
   }
 }

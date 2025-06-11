@@ -77,10 +77,23 @@ export interface WeguestCard extends Struct.ComponentSchema {
           preset: 'defaultHtml';
         }
       >;
+    checks: Schema.Attribute.Component<'weguest.check', true>;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     linkText: Schema.Attribute.String;
     linkUrl: Schema.Attribute.String;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface WeguestCheck extends Struct.ComponentSchema {
+  collectionName: 'components_weguest_checks';
+  info: {
+    description: '';
+    displayName: 'Check';
+    icon: 'bulletList';
+  };
+  attributes: {
+    value: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -110,6 +123,7 @@ declare module '@strapi/strapi' {
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
       'weguest.card': WeguestCard;
+      'weguest.check': WeguestCheck;
       'weguest.content-id': WeguestContentId;
     }
   }
