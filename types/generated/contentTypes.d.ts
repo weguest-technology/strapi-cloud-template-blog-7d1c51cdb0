@@ -502,6 +502,9 @@ export interface ApiBannerBanner extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    CmsName: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Private;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -609,6 +612,9 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
+    CmsName: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Private;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -653,6 +659,9 @@ export interface ApiTitleDescriptionCardsContainerTitleDescriptionCardsContainer
           localized: true;
         };
       }>;
+    CmsName: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Private;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

@@ -16,6 +16,11 @@
     }
   },
   "attributes": {
+    "CmsName": {
+      "type": "string",
+      "required": true,
+      "private": true
+    },
     "title": {
       "type": "string",
       "pluginOptions": {
