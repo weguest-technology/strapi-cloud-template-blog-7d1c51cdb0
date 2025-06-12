@@ -52,7 +52,18 @@
       "type": "integer"
     },
     "height": {
-      "type": "integer"
+      "type": "integer",
+      "required": true
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "weguest.card",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
