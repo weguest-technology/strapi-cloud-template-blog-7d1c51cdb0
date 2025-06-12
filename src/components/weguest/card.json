@@ -38,6 +38,11 @@
       "type": "component",
       "repeatable": true,
       "component": "weguest.check"
+    },
+    "icon": {
+      "type": "component",
+      "repeatable": false,
+      "component": "weguest.icon"
     }
   }
 }

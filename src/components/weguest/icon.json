@@ -1,0 +1,61 @@
+{
+  "collectionName": "components_weguest_icons",
+  "info": {
+    "displayName": "Icon",
+    "icon": "earth"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "weights",
+        "veracidad",
+        "ubicacion",
+        "triumph",
+        "transparencia",
+        "soportetecnico",
+        "llegada",
+        "ingresos",
+        "frikitec",
+        "experienciahuesped",
+        "experiencias",
+        "comunicacion",
+        "cohost",
+        "checkin",
+        "calidad",
+        "anuncios",
+        "aircover",
+        "limpieza",
+        "pc",
+        "analytics",
+        "calendar",
+        "checkInOut",
+        "limpiezaWhite",
+        "mantenimiento"
+      ],
+      "required": true
+    },
+    "size": {
+      "type": "enumeration",
+      "enum": [
+        "icon-xs",
+        "icon-sm",
+        "icon-md",
+        "icon-lg"
+      ],
+      "default": "icon-lg",
+      "required": true
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "black",
+        "white",
+        "gradient"
+      ],
+      "default": "black",
+      "required": true
+    }
+  }
+}

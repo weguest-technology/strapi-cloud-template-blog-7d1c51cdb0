@@ -78,6 +78,7 @@ export interface WeguestCard extends Struct.ComponentSchema {
         }
       >;
     checks: Schema.Attribute.Component<'weguest.check', true>;
+    icon: Schema.Attribute.Component<'weguest.icon', false>;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     linkText: Schema.Attribute.String;
     linkUrl: Schema.Attribute.String;
@@ -114,6 +115,53 @@ export interface WeguestContentId extends Struct.ComponentSchema {
   };
 }
 
+export interface WeguestIcon extends Struct.ComponentSchema {
+  collectionName: 'components_weguest_icons';
+  info: {
+    displayName: 'Icon';
+    icon: 'earth';
+  };
+  attributes: {
+    color: Schema.Attribute.Enumeration<['black', 'white', 'gradient']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'black'>;
+    size: Schema.Attribute.Enumeration<
+      ['icon-xs', 'icon-sm', 'icon-md', 'icon-lg']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'icon-lg'>;
+    type: Schema.Attribute.Enumeration<
+      [
+        'weights',
+        'veracidad',
+        'ubicacion',
+        'triumph',
+        'transparencia',
+        'soportetecnico',
+        'llegada',
+        'ingresos',
+        'frikitec',
+        'experienciahuesped',
+        'experiencias',
+        'comunicacion',
+        'cohost',
+        'checkin',
+        'calidad',
+        'anuncios',
+        'aircover',
+        'limpieza',
+        'pc',
+        'analytics',
+        'calendar',
+        'checkInOut',
+        'limpiezaWhite',
+        'mantenimiento',
+      ]
+    > &
+      Schema.Attribute.Required;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -125,6 +173,7 @@ declare module '@strapi/strapi' {
       'weguest.card': WeguestCard;
       'weguest.check': WeguestCheck;
       'weguest.content-id': WeguestContentId;
+      'weguest.icon': WeguestIcon;
     }
   }
 }
