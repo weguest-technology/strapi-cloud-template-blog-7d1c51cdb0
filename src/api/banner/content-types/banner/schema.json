@@ -4,7 +4,8 @@
   "info": {
     "singularName": "banner",
     "pluralName": "banners",
-    "displayName": "banner"
+    "displayName": "banner",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -24,27 +25,23 @@
       }
     },
     "headline": {
-      "type": "customField",
-      "options": {
-        "preset": "defaultHtml"
-      },
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      },
-      "customField": "plugin::ckeditor5.CKEditor"
+      }
     },
     "background": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
       ],
-      "type": "media",
-      "multiple": false,
-      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": true

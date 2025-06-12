@@ -473,6 +473,7 @@ export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
 export interface ApiBannerBanner extends Struct.CollectionTypeSchema {
   collectionName: 'banners';
   info: {
+    description: '';
     displayName: 'banner';
     pluralName: 'banners';
     singularName: 'banner';
@@ -504,13 +505,7 @@ export interface ApiBannerBanner extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    headline: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor5.CKEditor',
-        {
-          preset: 'defaultHtml';
-        }
-      > &
+    headline: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
