@@ -79,7 +79,7 @@ export interface WeguestCard extends Struct.ComponentSchema {
       >;
     checks: Schema.Attribute.Component<'weguest.check', true>;
     icon: Schema.Attribute.Component<'weguest.icon', false>;
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    image: Schema.Attribute.Media<'images' | 'files'>;
     linkText: Schema.Attribute.String;
     linkUrl: Schema.Attribute.String;
     title: Schema.Attribute.String;

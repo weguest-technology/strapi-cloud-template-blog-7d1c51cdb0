@@ -487,9 +487,7 @@ export interface ApiBannerBanner extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
-    background: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    > &
+    background: Schema.Attribute.Media<'files' | 'images'> &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -672,6 +670,12 @@ export interface ApiTitleDescriptionCardsContainerTitleDescriptionCardsContainer
           preset: 'defaultHtml';
         }
       > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    images: Schema.Attribute.Media<'images' | 'files', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

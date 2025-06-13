@@ -42,10 +42,8 @@
       "multiple": false,
       "required": true,
       "allowedTypes": [
-        "images",
         "files",
-        "videos",
-        "audios"
+        "images"
       ],
       "pluginOptions": {
         "i18n": {
